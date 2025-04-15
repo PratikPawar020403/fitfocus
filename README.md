@@ -8,12 +8,9 @@ A modern fitness dashboard mini-app built with Vite, React, and TypeScript. Easi
 - Responsive, user-friendly design
 
 ## Live Demo
-[https://fitfocus-app.windsurf.build](https://fitfocus-app.windsurf.build)
+(https://fit-focus.netlify.app/)
 
 ## Getting Started
 1. Clone the repo
 2. Install dependencies: `npm install`
 3. Start the app: `npm run dev`
-
-## License
-MIT

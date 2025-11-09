@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -5,6 +6,14 @@ import { NavLink } from "react-router-dom";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Moon, ArrowLeft } from "lucide-react";
+=======
+import React, { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import { Moon } from "lucide-react";
+>>>>>>> 755444eff2a606db1e26dd66e32748c17500068b
 import { storage } from "@/utils/storage";
 import { toast } from "sonner";
 import { useForm } from "react-hook-form";
@@ -79,12 +88,15 @@ const SleepEfficiencyCalculator = () => {
       
       <main className="flex-grow pt-24 pb-16">
         <div className="container mx-auto px-4 md:px-6">
+<<<<<<< HEAD
           <Button variant="ghost" size="sm" asChild className="mb-6">
             <NavLink to="/calculators" className="flex items-center">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Calculators
             </NavLink>
           </Button>
+=======
+>>>>>>> 755444eff2a606db1e26dd66e32748c17500068b
           <header className="mb-10">
             <h1 className="text-3xl font-bold mb-2 flex items-center gap-2">
               <Moon className="h-8 w-8 text-purple-500" />

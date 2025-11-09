@@ -3,12 +3,19 @@ import React from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import WilksInfoSection from "./wilks/WilksInfoSection";
 import WilksForm from "./wilks/WilksForm";
 import { useIsMobile } from "@/hooks/use-mobile";
+=======
+import WilksInfoSection from "./wilks/WilksInfoSection";
+import WilksForm from "./wilks/WilksForm";
+import { useIsMobile } from "@/hooks/use-mobile";
+import ThemeToggler from "@/components/ui-custom/ThemeToggler";
+>>>>>>> 755444eff2a606db1e26dd66e32748c17500068b
 
 const WilksCalculator = () => {
   const isMobile = useIsMobile();
@@ -19,6 +26,7 @@ const WilksCalculator = () => {
       
       <main className="flex-grow pt-20 md:pt-24 pb-12 md:pb-16">
         <div className="container mx-auto px-4 md:px-6">
+<<<<<<< HEAD
           <Button variant="ghost" size="sm" asChild className="mb-6">
             <NavLink to="/calculators" className="flex items-center">
               <ArrowLeft className="h-4 w-4 mr-2" />
@@ -30,6 +38,18 @@ const WilksCalculator = () => {
             <p className="text-muted-foreground text-sm md:text-base">
               Calculate your Wilks score to compare strength levels across different body weights and genders.
             </p>
+=======
+          <header className="mb-4 md:mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center">
+            <div>
+              <h1 className="text-2xl md:text-3xl font-bold mb-2">Wilks Coefficient Calculator</h1>
+              <p className="text-muted-foreground text-sm md:text-base">
+                Calculate your Wilks score to compare strength levels across different body weights and genders.
+              </p>
+            </div>
+            <div className="mt-4 sm:mt-0">
+              <ThemeToggler />
+            </div>
+>>>>>>> 755444eff2a606db1e26dd66e32748c17500068b
           </header>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">

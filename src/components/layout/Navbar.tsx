@@ -4,7 +4,10 @@ import { Button } from "@/components/ui/button";
 import { MenuIcon, XIcon, ActivityIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-mobile";
+<<<<<<< HEAD
 import ThemeToggler from "@/components/ui-custom/ThemeToggler";
+=======
+>>>>>>> 755444eff2a606db1e26dd66e32748c17500068b
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -97,9 +100,17 @@ const Navbar = () => {
             Calculators
           </NavLink>
         </nav>
+<<<<<<< HEAD
         {/* Theme Toggle Far Right */}
         <div className="flex items-center flex-shrink-0">
           <ThemeToggler className="hidden md:flex shadow-sm" />
+=======
+        {/* Get Started Button Far Right */}
+        <div className="flex items-center flex-shrink-0">
+          <Button asChild className="hidden md:inline-block font-semibold px-6 py-2 rounded-full shadow-sm bg-primary hover:bg-primary/90 text-white text-base transition-all">
+            <NavLink to="/dashboard">Get Started</NavLink>
+          </Button>
+>>>>>>> 755444eff2a606db1e26dd66e32748c17500068b
           {/* Hamburger Menu - Mobile Only */}
           <Button
             variant="ghost"
@@ -170,9 +181,15 @@ const Navbar = () => {
           >
             Calculators
           </NavLink>
+<<<<<<< HEAD
           <div className="mt-2 flex justify-center">
             <ThemeToggler className="md:hidden shadow-sm" />
           </div>
+=======
+          <Button className="mt-2 w-full py-3 text-lg rounded-full bg-primary hover:bg-primary/90 text-white font-semibold shadow-md transition-all" asChild>
+            <NavLink to="/dashboard" onClick={() => setIsOpen(false)}>Get Started</NavLink>
+          </Button>
+>>>>>>> 755444eff2a606db1e26dd66e32748c17500068b
         </div>
       </div>
     </header>

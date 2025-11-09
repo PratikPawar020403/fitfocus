@@ -13,7 +13,11 @@ interface DashboardMetricsProps {
 
 const DashboardMetrics = ({ metrics, profile, onMetricClick }: DashboardMetricsProps) => {
   return (
+<<<<<<< HEAD
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 sm:gap-1 md:gap-1 mb-4 animate-fade-in">
+=======
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-6 animate-fade-in">
+>>>>>>> 755444eff2a606db1e26dd66e32748c17500068b
       {/* Body Composition Metrics */}
       <BodyCompositionMetrics 
         metrics={metrics} 

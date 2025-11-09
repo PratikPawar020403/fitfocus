@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Netlify configuration - build & publish settings
 [build]
   command = "npm run build"
@@ -10,3 +11,8 @@
   from = "/*"
   to = "/index.html"
   status = 200
+=======
+[build]
+  command = "npm run build"
+  publish = "dist"
+>>>>>>> 755444eff2a606db1e26dd66e32748c17500068b

@@ -39,6 +39,7 @@ const CalculatorCard: React.FC<CalculatorCardProps> = ({
           )} 
         />
         
+<<<<<<< HEAD
         <CardContent className="p-2 sm:p-3 flex flex-col h-full">
           <div className="flex justify-between items-start mb-1 sm:mb-1">
             <div className={cn(
@@ -46,15 +47,32 @@ const CalculatorCard: React.FC<CalculatorCardProps> = ({
               isDark ? "bg-primary/20 group-hover:bg-primary/30" : "bg-primary/10 group-hover:bg-primary/20"
             )}>
               <Icon className="h-4 w-4 sm:h-4 sm:w-4 text-primary transition-transform duration-300 group-hover:scale-110" />
+=======
+        <CardContent className="p-4 sm:p-6 flex flex-col h-full">
+          <div className="flex justify-between items-start mb-3 sm:mb-4">
+            <div className={cn(
+              "p-2 sm:p-3 rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-colors duration-300",
+              isDark ? "bg-primary/20 group-hover:bg-primary/30" : "bg-primary/10 group-hover:bg-primary/20"
+            )}>
+              <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary transition-transform duration-300 group-hover:scale-110" />
+>>>>>>> 755444eff2a606db1e26dd66e32748c17500068b
             </div>
           </div>
           
           <div className="flex-grow">
+<<<<<<< HEAD
             <h3 className="text-base sm:text-lg font-semibold mb-1 font-display group-hover:text-primary transition-colors duration-200 line-clamp-2">{title}</h3>
             <p className="text-xs sm:text-sm text-muted-foreground line-clamp-3">{description}</p>
           </div>
           
           <div className="mt-2 text-primary text-xs sm:text-sm font-medium flex items-center transition-all duration-300 group-hover:translate-x-1">
+=======
+            <h3 className="text-base sm:text-lg font-semibold mb-2 font-display group-hover:text-primary transition-colors duration-200 line-clamp-2">{title}</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground line-clamp-3">{description}</p>
+          </div>
+          
+          <div className="mt-4 text-primary text-xs sm:text-sm font-medium flex items-center transition-all duration-300 group-hover:translate-x-1">
+>>>>>>> 755444eff2a606db1e26dd66e32748c17500068b
             Calculate
             <svg
               xmlns="http://www.w3.org/2000/svg"

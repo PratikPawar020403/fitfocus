@@ -20,7 +20,10 @@ import SleepEfficiencyCalculator from "./pages/calculators/SleepEfficiencyCalcul
 import WilksCalculator from "./pages/calculators/WilksCalculator";
 import NotFound from "./pages/NotFound";
 import BodyFatCalculator from "./pages/calculators/BodyFatCalculator";
+<<<<<<< HEAD
 import ScrollToTop from "@/components/layout/ScrollToTop";
+=======
+>>>>>>> 755444eff2a606db1e26dd66e32748c17500068b
 
 const queryClient = new QueryClient();
 
@@ -31,7 +34,10 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
+<<<<<<< HEAD
         <ScrollToTop />
+=======
+>>>>>>> 755444eff2a606db1e26dd66e32748c17500068b
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/dashboard" element={<Dashboard />} />

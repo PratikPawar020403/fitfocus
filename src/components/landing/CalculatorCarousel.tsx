@@ -12,19 +12,11 @@ import { calculatorCards } from "@/data/calculatorCardsData";
 
 const CalculatorCarousel: React.FC = () => {
   return (
-<<<<<<< HEAD
     <section className="py-6 sm:py-6 transition-colors duration-300">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-3 sm:mb-2 opacity-0 animate-on-scroll">Popular Health Calculators</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto opacity-0 animate-on-scroll mb-3 sm:mb-2">
-=======
-    <section className="py-20 transition-colors duration-300">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4 opacity-0 animate-on-scroll">Popular Health Calculators</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto opacity-0 animate-on-scroll">
->>>>>>> 755444eff2a606db1e26dd66e32748c17500068b
             Explore our most-used tools to monitor your health metrics
           </p>
         </div>

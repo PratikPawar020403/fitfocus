@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Import Tailwind directives first */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-display: 'Inter', system-ui, sans-serif;
+    /* Modern Blue/Mint/White Scheme */
+    --background: 210 60% 98%;  /* #f5f8fa - soft blue-tinted white */
+    --foreground: 215 28% 17%;  /* #232946 - dark blue */
+    --primary: 221 83% 53%;     /* #2563eb - vivid blue */
+    --primary-foreground: 0 0% 100%; /* #fff */
+    --accent: 161 94% 30%;      /* #19c37d - mint green */
+    --border: 210 16% 84%;      /* #dbeafe - light blue border */
+    --muted-foreground: 215 16% 47%; /* #6b7280 - muted blue-gray */
+
+    /* Dark mode overrides */
+    --dark-background: 230 20% 12%;   /* #181c23 - deep blue-gray */
+    --dark-foreground: 210 60% 98%;   /* #f5f8fa - soft white */
+    --dark-primary: 161 94% 30%;      /* #19c37d - mint green */
+    --dark-primary-foreground: 230 20% 12%; /* #181c23 */
+    --dark-accent: 221 83% 53%;       /* #2563eb - vivid blue */
+    --dark-border: 215 16% 28%;       /* #38445a - muted border */
+    --dark-muted-foreground: 210 16% 70%; /* #a2b3cf - muted light blue */
+
+    /* Custom health-related colors */
+    --health-optimal: 142 70% 45%;
+    --health-warning: 35 100% 50%;
+    --health-risk: 0 84% 60%;
+    --health-neutral: 210 10% 53%;  /* #7b8fa1 - muted blue-gray */
+
+    /* Sidebar styling */
+    --sidebar-background: 0 0% 100%; /* Remove sidebar background color */
+    --sidebar-foreground: 0 0% 100%; /* Remove sidebar foreground color */
+    --sidebar-primary: 0 0% 100%;   /* Remove sidebar primary color */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 100%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 100%;
+    --sidebar-ring: 0 0% 100%;
+  }
+
+  .dark {
+    /* Modern Blue/Mint/White Scheme */
+    --background: var(--dark-background);
+    --foreground: var(--dark-foreground);
+    --primary: var(--dark-primary);
+    --primary-foreground: var(--dark-primary-foreground);
+    --accent: var(--dark-accent);
+    --border: var(--dark-border);
+    --muted-foreground: var(--dark-muted-foreground);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--dark-background);
+    --foreground: var(--dark-foreground);
+    --primary: var(--dark-primary);
+    --primary-foreground: var(--dark-primary-foreground);
+    --accent: var(--dark-accent);
+    --border: var(--dark-border);
+    --muted-foreground: var(--dark-muted-foreground);
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.font-inter {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Responsive utility tweaks */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+section, .section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Card and button tweaks for mobile */
+.rounded-xl {
+  border-radius: 1rem;
+}
+
+@media (max-width: 640px) {
+  .rounded-xl {
+    border-radius: 0.75rem;
+  }
+  .p-6 {
+    padding: 1.25rem;
+  }
+}
+
+/* Fix grid gaps for mobile */
+@media (max-width: 768px) {
+  .grid-cols-3, .md\:grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+  .gap-8 {
+    gap: 1.5rem;
+  }
+}
+
+/* Improve button tap targets on mobile */
+@media (max-width: 480px) {
+  .px-8, .px-10 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .py-3, .py-4 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans overflow-x-hidden;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+/* Typography improvements for hierarchy and contrast */
+h1, .text-4xl, .text-5xl, .font-extrabold {
+  font-weight: 800;
+  color: #18181b;
+  letter-spacing: -0.01em;
+}
+h2, .text-3xl {
+  font-weight: 700;
+  color: #23272f;
+  letter-spacing: -0.005em;
+}
+h3, .text-2xl, .text-xl {
+  font-weight: 600;
+  color: #23272f;
+}
+.dark h1, .dark .text-4xl, .dark .text-5xl, .dark .font-extrabold {
+  color: #fff;
+}
+.dark h2, .dark .text-3xl {
+  color: #e5e7eb;
+}
+.dark h3, .dark .text-2xl, .dark .text-xl {
+  color: #e5e7eb;
+}
+
+/* Section spacing for less whitespace */
+section {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  section {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+  h1, .text-4xl, .text-5xl {
+    font-size: 2rem;
+  }
+  h2, .text-3xl {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  section {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+  h1, .text-4xl, .text-5xl {
+    font-size: 2.75rem;
+  }
+  h2, .text-3xl {
+    font-size: 2rem;
+  }
+}
+
+/* Responsive nav improvements */
+.navbar {
+  min-height: 64px;
+}
+@media (max-width: 767px) {
+  .navbar {
+    min-height: 56px;
+  }
+}
+
+/* Utility for strong contrast on buttons */
+.bg-primary, .btn-primary {
+  background: #14b8a6 !important;
+  color: #fff !important;
+}
+.bg-primary:hover, .btn-primary:hover {
+  background: #0e9488 !important;
+}
+
+/* Responsive font and spacing utilities */
+.text-base { font-size: 1rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-3xl { font-size: 1.875rem; }
+.text-4xl { font-size: 2.25rem; }
+.text-5xl { font-size: 3rem; }
+
+.font-inter { font-family: 'Inter', sans-serif; }
+
+/* Reduce unnecessary vertical space in grid gaps */
+.gap-4 { gap: 1rem; }
+.gap-8 { gap: 2rem; }
+.md\:gap-8 { gap: 2rem; }
+.md\:gap-4 { gap: 1rem; }
+
+/* Improve color contrast for muted text */
+.text-muted-foreground {
+  color: #6b7280;
+}
+.dark .text-muted-foreground {
+  color: #a1a1aa;
+}
+
+/* Buttons and links for accessibility */
+a, button, .btn, .btn-primary {
+  outline: none;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+a:focus, button:focus, .btn:focus, .btn-primary:focus {
+  box-shadow: 0 0 0 2px #14b8a6;
+}
+
+/* Mobile nav menu improvements */
+@media (max-width: 767px) {
+  .mobile-menu {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    box-shadow: 0 2px 8px rgba(30,42,90,0.09);
+    border-radius: 0 0 1rem 1rem;
+  }
+}
+
+/* Utility to ensure containers don't overflow on small screens */
+.container, .container-fluid {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Remove extra margin from last sections */
+section:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes zoom-in {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.9s cubic-bezier(0.24, 0.74, 0.58, 1) both;
+}
+.animate-slide-up {
+  animation: slide-up 1s cubic-bezier(0.24, 0.74, 0.58, 1) both;
+}
+.animate-zoom-in {
+  animation: zoom-in 0.7s cubic-bezier(0.24, 0.74, 0.58, 1) both;
+}
+
+/* Navbar shadow and background fix */
+.navbar-fixed {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: hsl(var(--background));
+  box-shadow: 0 2px 12px 0 rgba(30, 42, 90, 0.04);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+@media (max-width: 768px) {
+  .navbar-fixed {
+    box-shadow: 0 1px 6px 0 rgba(30, 42, 90, 0.07);
+  }
+}

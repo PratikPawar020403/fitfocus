@@ -1,0 +1,42 @@
+
+@layer components {
+  .health-status-optimal {
+    @apply text-health-optimal;
+  }
+  
+  .health-status-warning {
+    @apply text-health-warning;
+  }
+  
+  .health-status-risk {
+    @apply text-health-risk;
+  }
+  
+  .health-status-neutral {
+    @apply text-health-neutral;
+  }
+  
+  .progress-bg-optimal {
+    @apply bg-health-optimal/20;
+  }
+  
+  .progress-bg-warning {
+    @apply bg-health-warning/20;
+  }
+  
+  .progress-bg-risk {
+    @apply bg-health-risk/20;
+  }
+  
+  .progress-fill-optimal {
+    @apply bg-health-optimal;
+  }
+  
+  .progress-fill-warning {
+    @apply bg-health-warning;
+  }
+  
+  .progress-fill-risk {
+    @apply bg-health-risk;
+  }
+}

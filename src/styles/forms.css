@@ -1,0 +1,42 @@
+
+@layer base {
+  /* Improve accessibility for mobile devices */
+  input, select, textarea, button {
+    @apply text-base md:text-sm;
+  }
+  
+  /* Better tap targets on mobile */
+  @media (max-width: 768px) {
+    button, 
+    a, 
+    [role="button"],
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"] {
+      @apply touch-manipulation min-h-[44px] px-3;
+    }
+    
+    input,
+    select,
+    textarea {
+      @apply text-base;
+    }
+  }
+  
+  /* Fix iOS form elements */
+  input,
+  textarea,
+  select,
+  button {
+    @apply appearance-none;
+  }
+
+  /* Focus states for accessibility */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+}

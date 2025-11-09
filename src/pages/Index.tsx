@@ -99,9 +99,7 @@ const Index = () => {
           </div>
         </section>
       </main>
-      <div className="fixed bottom-6 right-6 z-50 animate-fade-in" style={{animationDelay: '1.4s'}}>
-        <ThemeToggler className="shadow-lg hover:shadow-xl" />
-      </div>
+      {/* Theme toggle is available in the Navbar (responsive). Removed duplicate floating toggle to avoid confusion. */}
       <Footer />
     </div>
   );

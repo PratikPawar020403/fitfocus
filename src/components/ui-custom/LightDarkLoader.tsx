@@ -37,13 +37,10 @@ const LightDarkLoader: React.FC<LightDarkLoaderProps> = ({ className }) => {
 
   if (!transitioning) return null;
 
+  // Use Tailwind classes and CSS variables for consistent colors across themes
   return (
-    <div 
-      className={`fixed inset-0 z-[9999] pointer-events-none transition-opacity duration-300 ${className}`}
-      style={{
-        backgroundColor: theme === 'dark' ? '#171717' : '#ffffff',
-        opacity: transitioning ? 0.5 : 0,
-      }}
+    <div
+      className={`fixed inset-0 z-[9999] pointer-events-none bg-background transition-opacity duration-300 ${transitioning ? 'opacity-50' : 'opacity-0'} ${className}`}
       aria-hidden="true"
     />
   );

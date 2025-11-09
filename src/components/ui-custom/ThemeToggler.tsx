@@ -20,11 +20,12 @@ const ThemeToggler: React.FC<ThemeTogglerProps> = ({ className }) => {
             variant="outline"
             size="icon"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className={`rounded-full border-black/10 dark:border-white/10 bg-[#F5F5F5] dark:bg-[#1C1C1C] ${className}`}
+            className={`rounded-full border border-border bg-card text-card-foreground shadow-sm ${className}`}
             aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
           >
-            <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-[#333333]" />
-            <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-[#EAEAEA]" />
+            {/* Icons use transform/scale to animate between states; colors rely on CSS variables for consistency */}
+            <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-foreground" />
+            <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-card-foreground" />
             <span className="sr-only">Toggle theme</span>
           </Button>
         </TooltipTrigger>

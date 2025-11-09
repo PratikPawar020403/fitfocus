@@ -45,10 +45,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.0",
-<<<<<<< HEAD
     "react-pageflip": "^2.0.3",
-=======
->>>>>>> 755444eff2a606db1e26dd66e32748c17500068b
     "react-router-dom": "^6.26.2",
     "recharts": "^2.12.7",
     "sonner": "^1.5.0",
@@ -62,10 +59,7 @@
     "@types/node": "^22.5.5",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-<<<<<<< HEAD
     "@types/react-router-dom": "^5.3.3",
-=======
->>>>>>> 755444eff2a606db1e26dd66e32748c17500068b
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.9.0",

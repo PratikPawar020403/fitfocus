@@ -188,13 +188,6 @@ const Calculators = () => {
                 to="/calculators/wilks"
                 className="hover:shadow-lg"
               />
-              <CalculatorCard 
-                title="Wilks Coefficient Calculator" 
-                description="Compare powerlifting strength levels across different body weights and genders."
-                icon={Dumbbell}
-                to="/calculators/wilks"
-                className="hover:shadow-lg"
-              />
             </div>
           </section>
         </div>
